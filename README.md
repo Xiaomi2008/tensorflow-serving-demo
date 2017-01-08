@@ -19,7 +19,7 @@ protobuf编译为python方法：
 protobuf编译为java方法：
 
 * 可以使用protoc安装grpc-java插件的方法，也可以使用maven插件生成，这里使用后者。
-* 项目的目录结构可以参考[官方说明][1]，直接把tensorflow serving代码中proto文件复制到项目中的相应目录里。pom的模板（包括java client的代码）都参考了[deep_recommend_system][2]项目。
+* 项目的目录结构可以参考插件的[官方说明][1]，直接把tensorflow serving代码中proto文件复制到项目中的相应目录里。pom的模板（包括java client的代码）都参考了[deep_recommend_system][2]项目。如果需要自己编译生成，可以直接用本项目中的pom，已经包含相应插件。
 * 编译完成之后的文件（target/generated-source）加入到client项目中使用即可。
 
 最后，运行客户端：
