@@ -1,8 +1,5 @@
-# tf_serving_demo
 
-mnist client的python和java版本。
-
-TensorFlow Serving官方教程中只提供了python版本，并且是使用bazel直接编译成可执行文件，不利于开发调试。而这里的版本是可以直接运行python文件或是jar文件的。
+由于TensorFlow Serving官方教程中只提供了python版本，并且是使用bazel直接编译成可执行文件，不利于开发调试。所以开发了这个包含python和java版本的mnist serving client，且包含了protobuf生成文件。
 
 运行方法如下：
 
