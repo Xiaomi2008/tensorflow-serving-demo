@@ -1,7 +1,14 @@
 
 由于TensorFlow Serving官方教程中只提供了python版本，并且是使用bazel直接编译成可执行文件，不利于开发调试。所以开发了这个包含python和java版本的mnist serving client，且包含了protobuf生成文件。
 
-运行方法如下：
+## 安装Tensorflow Serving
+早期的Tensorflow Serving是需要源码编译的，如果需要源码编译，参考下列步骤：
+1 安装jdk1.8，然后用jdk1.8编译bazel
+2 装grpc：pip install grpcio
+3 如果系统没有curl-devel，需要[自行下载](http://cygwin.mirror.constant.com/x86_64/release/curl/libcurl-devel/)，然后设置`C_INCLUDE_PATH`和`CPLUS_INCLUDE_PATH`，把include路径加进去。
+4 下载Tensorflow，到tensorflow目录下运行configure，然后编译`bazel build -c opt  tensorflow_serving/... |  bazel test-c opt  tensorflow_serving/...`
+
+## 运行方法
 
 首先参考TensorFlow Serving官方教程可以用mnist_export.py导出模型，并且启动model server。默认9000端口。
 
